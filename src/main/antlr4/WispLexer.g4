@@ -72,7 +72,7 @@ COLOR: '#' ( COLOR_SHORT | COLOR_SHORT_ALPHA | COLOR_FULL | COLOR_FULL_ALPHA);
 
 fragment ALPHA_NUMERIC		: [a-zA-Z0-9]+;
 fragment ALPHA_NUM_HYPHEN	: [a-zA-Z0-9-]+;
-fragment NORMAL				: DEC '.' DEC '.' DEC;
+fragment NORMAL				: 'v'? DEC '.' DEC '.' DEC;
 fragment PRE_RELEASE		: NORMAL '-' PRE_RELEASE_PART ('.' PRE_RELEASE_PART)*;
 fragment BUILD				: NORMAL '+' BUILD_PART ('.' BUILD_PART)*;
 fragment PRE_RELEASE_BUILD:
