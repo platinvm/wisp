@@ -16,3 +16,6 @@
 - Timestamp: 2023-04-05T12:34:56+07:00
 - Percentage: 50%
 - Version: 1.0.0-alpha
+
+## Example
+An example is available [here](./src/test/resources/examples/example_configuration.wisp)
