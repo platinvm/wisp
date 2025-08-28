@@ -10,6 +10,7 @@
         mac: b8:27:eb:01:23:45,
         firmware: 1.0.3,
         license: true,
+        tags: {"home", "wifi"},
         network: {
             ipv4: 10.160.6.119,
             ipv6: fe80::5008:bf87:9339:47ad,
