@@ -13,9 +13,9 @@
 - IPv6 Address: 601e:bd66:e1fd:5437:fa41:d25a:a5c2:122f, ::1
 - Color: #ffffff
 - Duration: 1h, 10m, 2.5s, 50ms
-- Timestamp: 2023-04-05T12:34:56+07:00
+- Timestamp: 2023-04-05T12:34:56+07:00 (ISO 8601)
 - Percentage: 50%
-- Version: 1.0.0-alpha
+- Version: 1.0.0-alpha (SemVer)
 
 ## Example
 An example is available [here](./src/test/resources/examples/example_configuration.wisp)
