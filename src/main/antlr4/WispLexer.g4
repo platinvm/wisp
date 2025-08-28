@@ -27,7 +27,9 @@ HEXADECIMAL	: SIGN? '0x' HEX+;
 PERCENTAGE	: (INTEGER | FLOAT) '%';
 
 fragment ESC	: '\\' ('"' | '\\' | 'n' | 'r' | 't');
-STRING			: '"' ( ESC | ~('"' | '\\' | '\r' | '\n'))* '"';
+STRING			: QUOTED_STRING | SQUOTED_STRING;
+QUOTED_STRING	: '"' ( ESC | ~('"' | '\\' | '\r' | '\n'))* '"';
+SQUOTED_STRING	: '\'' (~['\r\n'])* '\'';
 
 MULTILINE_STRING: '"""' (.)*? '"""';
 
