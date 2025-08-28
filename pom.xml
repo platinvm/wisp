@@ -11,13 +11,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>21</maven.compiler.target>
         <maven.compiler.source>21</maven.compiler.source>
+
+        <antlr4.version>4.13.1</antlr4.version>
+        <antlr4test.version>1.22</antlr4test.version>
+        <!-- 
+            antlr4test 1.22 mojo uses an older 
+            runtime (4.11.1) but there is no newer 
+            version to use. 
+        -->
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4-runtime</artifactId>
-            <version>4.11.1</version>
+            <version>${antlr4.version}</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
@@ -26,24 +34,38 @@
     <build>
         <plugins>
             <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>${project.basedir}/src/main/</directory>
+                            <includes>
+                                <include>golang/parser/*</include>
+                            </includes>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr4-maven-plugin</artifactId>
-                <version>4.11.1</version>
+                <version>${antlr4.version}</version>
                 <executions>
                     <execution>
+                        <id>Java</id>
                         <goals>
                             <goal>antlr4</goal>
                         </goals>
                     </execution>
-                    <!-- to generate sources for a language just copy and modify this execution -->
-                    <!-- <execution>
+                    <execution>
+                        <id>Go</id>
                         <goals>
                             <goal>antlr4</goal>
                         </goals>
-                        <id>Go</id>
                         <configuration>
                             <outputDirectory>
-                                ${project.basedir}/target/generated-sources/golang
+                                ${project.basedir}/src/main/golang/parser
                             </outputDirectory>
                             <visitor>true</visitor>
                             <listener>true</listener>
@@ -51,13 +73,13 @@
                                 <language>Go</language>
                             </options>
                         </configuration>
-                    </execution> -->
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
                 <groupId>com.khubla.antlr</groupId>
                 <artifactId>antlr4test-maven-plugin</artifactId>
-                <version>1.22</version>
+                <version>${antlr4test.version}</version>
                 <configuration>
                     <verbose>true</verbose>
                     <showTree>true</showTree>

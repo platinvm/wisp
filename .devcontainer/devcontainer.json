@@ -3,19 +3,23 @@
 {
 	"name": "Java",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/base",
 
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
-			"version": "none",
-			"installMaven": "true",
-			"installGradle": "false"
+			"version": "21",
+			"installMaven": true,
+			"mavenVersion": "3.8"
+		},
+		"ghcr.io/devcontainers/features/go:1": {
+			"version": "1.25"
 		}
 	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"mike-lischke.vscode-antlr4"
+				"mike-lischke.vscode-antlr4",
+				"golang.go"
 			]
 		}
 	}
