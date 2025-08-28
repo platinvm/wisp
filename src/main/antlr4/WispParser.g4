@@ -10,13 +10,14 @@ options {
 
 program: expression EOF;
 
-expression: literal | array | object;
+expression: literal | array | object | set;
 
 array: '[' (expression (',' expression)* ','?)? ']';
 
-object: '{' (pair (',' pair)* ','?)? '}';
+object	: '{' (pair (',' pair)* ','?)? '}';
+pair	: (ID | STRING) ':' expression;
 
-pair: (ID | STRING) ':' expression;
+set: '{' (literal (',' literal)* ','?)? '}';
 
 literal:
 	BOOLEAN
