@@ -5,7 +5,7 @@
 - Float: 3.141
 - Hex: 0xFF
 - Binary: 0b1001
-- String: "hello, world!"
+- String: "hello, world!", 'hi there!'
 - Multiline String: """multiline!"""
 - Boolean: true, false
 - MAC Address: ad:d2:5b:f1:17:b1
