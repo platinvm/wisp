@@ -1,19 +1,18 @@
-# Wisp 
+# Wisp
 
-## Types
-- **Number**: Integer and floating-point values (e.g., `42`, `3.14`)
-- **String**: Unicode text values (e.g., `"hello world"`)
-- **Boolean**: `true`, `false`
-- **Null**: Represents an explicit null value
-- **Array**: Ordered list of values
-- **Object**: Key-value pairs (map/dictionary)
-- **IPv4 Address**: e.g., `192.168.1.1`
-- **IPv6 Address**: e.g., `2001:0db8:85a3::8a2e:0370:7334`
-- **MAC Address**: e.g., `00:1A:2B:3C:4D:5E`
-- **Bytes**: Raw binary data (base64 or hex encoded)
-- **Hexadecimal**: Hex-encoded numbers or strings (e.g., `0x1A2B`)
-- **Semantic Version**: e.g., `1.2.3`, `2.0.0-beta`
-- **Date/Time**: ISO 8601 format (e.g., `2024-06-01T12:00:00Z`)
-- **URI/URL**: e.g., `https://example.com`
-- **Enum**: One of a predefined set of values
-- **Regular Expression**: Pattern strings for validation
+## Data Types
+- Integer: 10
+- Float: 3.141
+- Hex: 0xFF
+- Binary: 0b1001
+- String: "hello, world!"
+- Multiline String: """multiline!"""
+- Boolean: true, false
+- MAC Address: ad:d2:5b:f1:17:b1
+- IPv4 Address: 242.205.159.106, 127.0.0.1
+- IPv6 Address: 601e:bd66:e1fd:5437:fa41:d25a:a5c2:122f, ::1
+- Color: #ffffff
+- Duration: 1h, 10m, 2.5s, 50ms
+- Timestamp: 2023-04-05T12:34:56+07:00
+- Percentage: 50%
+- Version: 1.0.0-alpha
