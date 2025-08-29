@@ -68,7 +68,7 @@
                                 ${project.basedir}/src/main/golang/parser
                             </outputDirectory>
                             <visitor>true</visitor>
-                            <listener>true</listener>
+                            <listener>false</listener>
                             <options>
                                 <language>Go</language>
                             </options>

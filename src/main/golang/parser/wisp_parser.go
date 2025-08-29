@@ -233,18 +233,6 @@ func (s *ProgramContext) ToStringTree(ruleNames []string, recog antlr.Recognizer
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *ProgramContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.EnterProgram(s)
-	}
-}
-
-func (s *ProgramContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.ExitProgram(s)
-	}
-}
-
 func (s *ProgramContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case WispParserVisitor:
@@ -404,18 +392,6 @@ func (s *ExpressionContext) GetRuleContext() antlr.RuleContext {
 
 func (s *ExpressionContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
 	return antlr.TreesStringTree(s, ruleNames, recog)
-}
-
-func (s *ExpressionContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.EnterExpression(s)
-	}
-}
-
-func (s *ExpressionContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.ExitExpression(s)
-	}
 }
 
 func (s *ExpressionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
@@ -597,18 +573,6 @@ func (s *ArrayContext) GetRuleContext() antlr.RuleContext {
 
 func (s *ArrayContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
 	return antlr.TreesStringTree(s, ruleNames, recog)
-}
-
-func (s *ArrayContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.EnterArray(s)
-	}
-}
-
-func (s *ArrayContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.ExitArray(s)
-	}
 }
 
 func (s *ArrayContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
@@ -842,18 +806,6 @@ func (s *ObjectContext) ToStringTree(ruleNames []string, recog antlr.Recognizer)
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *ObjectContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.EnterObject(s)
-	}
-}
-
-func (s *ObjectContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.ExitObject(s)
-	}
-}
-
 func (s *ObjectContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case WispParserVisitor:
@@ -1054,18 +1006,6 @@ func (s *PairContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) s
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *PairContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.EnterPair(s)
-	}
-}
-
-func (s *PairContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.ExitPair(s)
-	}
-}
-
 func (s *PairContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case WispParserVisitor:
@@ -1233,18 +1173,6 @@ func (s *SetContext) GetRuleContext() antlr.RuleContext {
 
 func (s *SetContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
 	return antlr.TreesStringTree(s, ruleNames, recog)
-}
-
-func (s *SetContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.EnterSet(s)
-	}
-}
-
-func (s *SetContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.ExitSet(s)
-	}
 }
 
 func (s *SetContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
@@ -1488,18 +1416,6 @@ func (s *LiteralContext) GetRuleContext() antlr.RuleContext {
 
 func (s *LiteralContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
 	return antlr.TreesStringTree(s, ruleNames, recog)
-}
-
-func (s *LiteralContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.EnterLiteral(s)
-	}
-}
-
-func (s *LiteralContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(WispParserListener); ok {
-		listenerT.ExitLiteral(s)
-	}
 }
 
 func (s *LiteralContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
