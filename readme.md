@@ -1,4 +1,4 @@
-# Wisp
+# CFG
 
 ## Data Types
 - Integer: 10
